@@ -1,0 +1,24 @@
+package cn.lige2333;
+
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		MainUI MUI = new MainUI();
+		Scanner scn = new Scanner(System.in);
+		System.out.println("请输入你的姓名：");
+		Player.setName(scn.nextLine());
+		Player.setMoney();
+		while(true) {
+		try {
+		MUI.mainMenu();
+		}
+		catch(Exception e){
+			System.out.println("输入有误，请重新输入");
+		}
+		}
+	}
+
+}
